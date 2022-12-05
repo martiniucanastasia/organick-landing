@@ -1,0 +1,73 @@
+@import "../general/variables";
+
+@mixin button() {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  width: 220px;
+  appearance: none;
+  outline: none;
+  border: none;
+
+  .span {
+    padding: 25px 0 25px 25px;
+    font-size: 19px;
+    margin-right: 20px;
+  }
+
+  .circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.button-dark {
+  @include button();
+  background: $primary-color;
+  border: 1px solid $primary-color;
+
+  .span {
+    color: white;
+  }
+
+  .circle {
+    background: $primary-color-lighter;
+  }
+}
+
+.button-light {
+  @include button();
+  background: $second-color;
+  border: 1px solid $second-color;
+
+  .span {
+    color: $primary-color;
+  }
+
+  .circle {
+    background: $primary-color;
+  }
+}
+
+.button-outline {
+  @include button();
+  background: white;
+  border: 1px solid $primary-color;
+
+  .span {
+    color: $primary-color;
+  }
+
+  .circle {
+    background: $primary-color;
+  }
+}

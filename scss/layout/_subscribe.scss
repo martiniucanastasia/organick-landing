@@ -1,0 +1,79 @@
+.subscribe {
+  padding: 100px 0;
+
+  @media only screen and (max-width: 768px) {
+    padding: 50px 0;
+  }
+
+  .subscribe-content {
+    padding: 100px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background: url("/assets/images/subscribe-banner.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    @media only screen and (max-width: 768px) {
+      background-position: 30% 40%;
+    }
+  }
+
+  .subscribe-title {
+    color: white;
+    max-width: 300px;
+
+    @media only screen and (max-width: 1024px) {
+      max-width: none;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .subscribe-form {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    &__input {
+      min-width: 350px;
+      border: none;
+      appearance: none;
+      outline: none;
+      padding-left: 30px;
+      padding-top: 33px;
+      padding-bottom: 33px;
+      border-radius: 15px;
+      margin-right: 10px;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: "Open Sans";
+
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 20px;
+      }
+
+      @media only screen and (max-width: 455px) {
+        min-width: 260px;
+        margin-right: 0;
+
+      }
+    }
+
+    .button-dark {
+      width: 200px;
+
+      @media only screen and (max-width: 455px) {
+        padding-right: 20px;
+      }
+    }
+  }
+}

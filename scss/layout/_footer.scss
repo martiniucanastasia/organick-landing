@@ -1,0 +1,136 @@
+.footer {
+  padding: 100px 0;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 50px 0;
+  }
+
+  &-columns {
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    .footer-title {
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 30px;
+      letter-spacing: 0.36px;
+      color: $primary-color;
+    }
+
+    &__contact {
+      @media only screen and (max-width: 1024px) {
+        padding: 50px 0;
+        order: 2;
+      }
+
+      .footer-title {
+        display: flex;
+        justify-content: flex-end;
+
+        @media only screen and (max-width: 1024px) {
+          justify-content: center;
+        }
+      }
+
+      ul {
+        padding: 20px 0 0 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+          text-align: right;
+
+          @media only screen and (max-width: 1024px) {
+            text-align: center;
+          }
+
+          p.span {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    &__branding {
+      text-align: center;
+      border-left: 1px solid $line-color;
+      border-right: 1px solid $line-color;
+      padding: 0 50px;
+      max-width: 670px;
+      flex-grow: 1;
+      margin: 0 20px;
+
+      @media only screen and (max-width: 1024px) {
+        order: 1;
+        max-width: none;
+        padding: 50px 0;
+        border: none;
+        border-top: 1px solid $line-color;
+        border-bottom: 1px solid $line-color;
+      }
+
+      .logo {
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+
+        &-wrapper {
+          width: 60px;
+          height: 60px;
+          background-color: $accent-color-lighter;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s;
+          cursor: pointer;
+
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+
+          &:hover {
+            background-color: $accent-color;
+          }
+        }
+      }
+    }
+
+    &__utility {
+      @media only screen and (max-width: 1024px) {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+
+        @media only screen and (max-width: 1024px) {
+          justify-content: center;
+          align-items: center;
+        }
+
+        &-link {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
