@@ -1,0 +1,139 @@
+.products {
+  padding: 200px 0 140px 0;
+
+  @media only screen and (max-width: 991px) {
+    padding: 100px 0;
+  }
+
+  &-content {
+    text-align: center;
+
+    .label {
+      padding-bottom: 20px;
+    }
+
+    .title {
+      font-weight: 700px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    @media only screen and (max-width: 1439px) {
+      justify-content: center;
+    }
+
+    &-product {
+      padding: 30px 30px 30px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 450px;
+      background-color: $light-gray;
+      border-radius: 30px;
+
+      @media only screen and (max-width: 1439px) {
+        width: 350px;
+      }
+
+      @media only screen and (max-width: 350px) {
+        padding: 30px 10px;
+      }
+
+      &-upper {
+        background-color: $primary-color;
+        color: white;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        max-width: 118px;
+        text-align: center;
+        padding: 5px 20px;
+        border-radius: 5px;
+        width: 100%;
+        margin: 0;
+      }
+
+      &-middle {
+        @media only screen and (max-width: 991px) {
+          max-width: 250px;
+          margin: 0 auto;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        &-img {
+          margin: 0px 30px 0px 30px;
+
+          @media only screen and (max-width: 1439px) {
+            width: 100%;
+          }
+        }
+      }
+
+      &-down {
+        .name {
+          font-family: "Roboto";
+          font-weight: 400;
+          font-size: 22px;
+          color: $primary-color;
+        }
+
+        .line-between {
+          border: 1px solid;
+          border-color: $line-color;
+          max-width: 380px;
+          margin: 15px 0;
+        }
+
+        .prices {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          padding: 5px;
+
+          &-difference {
+            display: flex;
+
+            @media only screen and (max-width: 1439px) {
+              flex-direction: column;
+            }
+          }
+        }
+
+        .oldprice {
+          font-family: "Open Sans";
+          font-weight: 400;
+          color: $oldprice-color;
+          font-size: 18px;
+          text-decoration: line-through;
+        }
+
+        .currentprice {
+          font-family: "Open Sans";
+          font-weight: 700;
+          font-size: 18px;
+          color: $primary-color;
+          margin-left: 20px;
+        }
+
+        @media only screen and (max-width: 1439px) {
+
+          .oldprice,
+          .currentprice {
+            font-size: 17px;
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+// ROW BLOCKS
+.row {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1024px) {
+    & > *:not(:first-child) {
+      margin-top: 25px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+}
+
+.col-left {
+  @media (min-width: 1024px) {
+    width: 50%;
+    padding-right: 25px;
+  }
+}
+
+.col-right {
+  @media (min-width: 1024px) {
+    width: 50%;
+    padding-left: 25px;
+  }
+}
+
+// DIFFERENT HELPERS
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.label {
+  color: $accent-color;
+  font-family: "Yellowtail";
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+.title {
+  color: $primary-color;
+  font-family: "Roboto";
+  font-size: 45px;
+  margin-bottom: 0;
+  @media only screen and (max-width: 991px) {
+    font-size: 30px;
+  }
+  @media only screen and (max-width: 525px) {
+    font-size: 25px;
+  }
+}
+
+.span {
+  color: $basic-gray;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.36px;
+  @media only screen and (max-width: 525px) {
+    font-size: 16px;
+  }
+}
+

@@ -1,0 +1,152 @@
+.navbar {
+  padding: 40px 0;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      @media only screen and (max-width: 600px) {
+        width: 200px;
+      }
+
+      @media only screen and (max-width: 425px) {
+        width: 160px;
+      }
+    }
+  }
+
+  &__nav {
+    margin-left: 120px;
+    margin-right: auto;
+    font-family: "Roboto";
+
+    @media only screen and (max-width: 1199px) {
+      margin-left: 60px;
+    }
+
+    @media only screen and (max-width: 991px) {
+      display: none;
+    }
+
+    &-item {
+      text-decoration: none;
+      font-size: 19px;
+      color: $primary-color;
+      transition: all 0.3s;
+
+      &--active,
+      &:hover {
+        color: $accent-color;
+      }
+
+      &:not(:last-child) {
+        margin-right: 40px;
+
+        @media only screen and (max-width: 1199px) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+    @media only screen and (max-width: 991px) {
+      display: block;
+    }
+
+    &-lines {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 26px;
+      width: 32px;
+
+      &:hover {
+        .line {
+          transition: all 0.3s;
+          background-color: $accent-color;
+        }
+      }
+
+      .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: $primary-color;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
+    font-family: "Roboto";
+    font-weight: 400;
+    color: $primary-color;
+    border: 1px solid $line-color;
+    border-radius: 33px;
+    padding: 7px 24px 7px 10px;
+    cursor: pointer;
+
+    @media only screen and (max-width: 600px) {
+      padding-right: 0px;
+    }
+
+    @media only screen and (max-width: 425px) {
+      display: none;
+    }
+
+    &:hover {
+      .navbar__cart-circle {
+        background: $accent-color;
+        transition: all 0.3s;
+      }
+
+      .navbar__cart-text {
+        color: $accent-color;
+        transition: all 0.3s;
+      }
+    }
+
+    &-circle {
+      padding: 15px;
+      width: 55px;
+      height: 55px;
+      background: $primary-color;
+      border-radius: 50px;
+      outline: none;
+      appearance: none;
+      border: none;
+      margin-right: 10px;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      .cart-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-text {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 17px;
+      transition: all 0.3s;
+
+      @media only screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
+}
